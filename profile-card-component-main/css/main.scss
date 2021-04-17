@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+$green: #19a2ae;
+$dark1: #2d3248;
+$dark2: #6a6f81;
+
+@mixin subtext() {
+	color: $dark2;
+	font-weight: 400;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	background-color: $green;
+	margin: 0;
+	padding: 0;
+
+	a:link,
+	a:visited,
+	a:hover {
+		text-decoration: none;
+		color: white;
+	}
+
+	.bg {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		position: absolute;
+
+		.imgtop {
+			position: absolute;
+			top: -90%;
+			left: -15%;
+			width: 70%;
+		}
+
+		.imgbottom {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			width: 70%;
+			opacity: 0.3;
+		}
+	}
+
+	.container {
+		display: flex;
+		height: 90vh;
+		width: auto;
+		justify-content: center;
+		align-items: center;
+
+		.card {
+			position: absolute;
+			background-color: white;
+			border-radius: 1.125rem;
+			width: 23.4375rem;
+			height: 25rem;
+			display: grid;
+			grid-template-rows: 9.375rem 9.375rem 6.25rem;
+			box-shadow: 32px 1px 64px -37px rgba(0, 0, 0, 0.52);
+			z-index: 2;
+
+			.top {
+				grid-area: 1/1/2/2;
+				background-image: url('../images/bg-pattern-card.svg');
+				border-radius: 1.125rem 1.125rem 0 0;
+			}
+
+			.box-user {
+				display: grid;
+				align-items: center;
+				border-radius: 624.9375rem;
+				position: absolute;
+				padding: 0.25rem;
+				background-color: white;
+				left: 50%;
+				top: 40%;
+				transform: translate(-50%, -50%);
+
+				.user {
+					border-radius: 624.9375rem;
+				}
+			}
+			.details {
+				grid-area: 2/1/3/2;
+				text-align: center;
+				border-bottom: 1px solid rgba(106, 111, 129, 0.3);
+
+				.txt-info {
+					padding-top: 5rem;
+					margin: 0 auto;
+
+					.username {
+						font-weight: 700;
+						color: $dark1;
+						font-weight: 700;
+					}
+					.age,
+					.txt-city {
+						@include subtext();
+						padding-top: 0.625rem;
+					}
+				}
+			}
+			.social {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 2.8125rem;
+				text-align: center;
+
+				.numbers {
+					font-weight: 700;
+				}
+				.subtext {
+					@include subtext();
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+}
+
+@import 'mobile';
+@import 'footer';
