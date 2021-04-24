@@ -1,8 +1,8 @@
 {
-	"devDependencies": {
-		"node-sass": "^5.0.0"
-	},
-	"scripts": {
-		"compile:sass": "node-sass  --style compressed css/main.scss css/main.css --output-style compressed"
-	}
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass  --style compressed css/main.scss css/main.css --output-style compressed"
+  }
 }
