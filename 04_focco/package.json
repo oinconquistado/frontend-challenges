@@ -1,0 +1,21 @@
+{
+	"name": "focco-estudantil",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "sass ./scss/style.scss ./css/style.css --watch",
+		"build": "sass ./scss/style.scss ./css/style.css --style=compressed"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oinconquistado/focco-estudantil.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/oinconquistado/focco-estudantil/issues"
+	},
+	"homepage": "https://github.com/oinconquistado/focco-estudantil#readme"
+}

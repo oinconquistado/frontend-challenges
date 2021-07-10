@@ -1,0 +1,309 @@
+@import './modules/variables';
+@import './modules/reset';
+body {
+	overflow: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+#quemsomos,
+#proposta {
+	display: grid;
+	grid-template: 100vh / 100vw;
+}
+
+#trabalheconosco {
+	display: grid;
+	grid-template: 100vh / 100vw;
+}
+
+.container {
+	grid-template: 105vh / 100vw;
+	overflow: hidden;
+	// border: solid 2px red;
+}
+
+.top-menu {
+	display: flex;
+	z-index: 10;
+	position: absolute;
+	align-items: center;
+	justify-content: space-between;
+	width: 98vw;
+	height: 15vh;
+	// border: solid 2px red;
+	#logo {
+		font-family: $inter;
+		font-weight: 700;
+		color: $foreground;
+		padding-left: 1rem;
+		font-size: 3rem;
+		opacity: 0.9;
+		&::before {
+			content: '\f19c';
+			font-family: 'Font Awesome 5 Free';
+			padding: 1.25rem;
+			color: $purple;
+		}
+	}
+	#menu {
+		display: flex;
+		list-style: none;
+		color: $foreground;
+		li a {
+			font-family: $sans;
+			color: inherit;
+			font-size: 1.25rem;
+			font-weight: 600;
+			padding: 1.25rem;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover {
+				color: $purple;
+			}
+		}
+	}
+}
+
+.container {
+	background: $background;
+
+	.content {
+		z-index: 9;
+		color: $foreground;
+		position: absolute;
+		top: 50%;
+		left: 3%;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 20% 60% 20%;
+		font-family: $sans;
+		h1 {
+			font-size: 4rem;
+			width: 70%;
+			line-height: 1;
+			opacity: 0.9;
+			font-weight: bold;
+			// text-transform: uppercase;
+			// padding: 0;
+			// border: solid 2px red;
+		}
+		h3 {
+			font-size: 2rem;
+			font-weight: 300;
+			padding-top: 1.5625rem;
+			padding-bottom: 1.875rem;
+		}
+
+		button {
+			width: 13.75rem;
+			height: 3.125rem;
+			text-transform: uppercase;
+			border-radius: 2px;
+			cursor: pointer;
+			&:hover {
+				font-weight: bold;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+
+		#btn-quem-somos {
+			margin-right: 20px;
+			color: $foreground;
+			background: transparent;
+			border: solid 2px $foreground;
+			a {
+				color: inherit;
+				&:hover {
+					color: inherit;
+				}
+			}
+			&:hover {
+				color: $purple;
+				border: solid 2px $purple;
+			}
+		}
+
+		#btn-proposta {
+			color: $foreground;
+			background: $purple;
+			border: none;
+			a {
+				color: inherit;
+				&:hover {
+					color: inherit;
+				}
+			}
+			&:hover {
+				background: $purple-hover;
+			}
+		}
+	}
+
+	.overlay {
+		background: $background;
+		position: absolute;
+		width: 100%;
+		height: 117vh;
+		opacity: 0.45;
+		overflow: hidden;
+	}
+
+	#myVideo {
+		width: 105vw;
+	}
+}
+
+#quemsomos,
+#trabalheconosco {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+#quemsomos {
+	.quemsomos-img {
+		background-image: url('../images/school.jpg');
+		background-position: center;
+		background-size: cover;
+		.overlay {
+			background: $purple;
+			opacity: 0.7;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.quemsomos-texto {
+		h1 {
+			// text-transform: uppercase;
+			color: $purple-hover;
+			font-family: $sans;
+			font-weight: bold;
+			font-size: 3.9rem;
+			line-height: 1.1;
+			padding: 3.125rem 0px 0px 3rem;
+			span {
+				color: $foreground;
+				opacity: 0.9;
+				background: $purple;
+				padding: 0 0.3125rem 0 0.3125rem;
+			}
+		}
+	}
+}
+
+#proposta {
+	#form-proposta {
+		position: absolute;
+		z-index: 10;
+		display: grid;
+		height: 111vh;
+		width: 100vw;
+
+		place-items: center;
+		#form-box {
+			width: 60rem;
+			height: 40rem;
+			background: $foreground;
+			border-radius: 0.3125rem;
+			opacity: 0.7;
+			display: grid;
+			place-items: center;
+			grid-template-columns: 50% 50%;
+
+			.texto-proposta {
+				padding-left: 4rem;
+				h1 {
+					font-size: 4.5rem;
+					color: $background;
+				}
+			}
+			form {
+				font-family: $sans;
+				width: 80%;
+				opacity: 1;
+				* {
+					font-size: 1.125rem;
+					width: 15.625rem;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+				button {
+					height: 40px;
+					color: $foreground;
+					background: $purple;
+					border: none;
+					text-transform: uppercase;
+					&:hover {
+						background: $purple-hover;
+					}
+				}
+			}
+		}
+	}
+
+	.overlay {
+		background: $purple;
+		position: absolute;
+		width: 100%;
+		height: 111vh;
+		opacity: 0.85;
+	}
+	#myVideo2 {
+		width: 100vw;
+	}
+}
+
+#trabalheconosco {
+	margin-top: 11vh;
+	// background: $purple;
+	// border: solid 2px red;
+
+	.trabalheconosco-form {
+		display: grid;
+		grid-template-rows: 30% 50%;
+		justify-content: center;
+		h1 {
+			font-size: 2.5rem;
+			font-family: $sans;
+			text-align: center;
+			color: $background;
+			align-self: end;
+			padding: 3.125rem;
+		}
+		form {
+			margin: 0 auto;
+			font-family: $sans;
+			width: 80%;
+			opacity: 1;
+			* {
+				font-size: 1.125rem;
+				width: 15.625rem;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			button {
+				height: 40px;
+				color: $foreground;
+				background: $purple;
+				border: none;
+				text-transform: uppercase;
+				&:hover {
+					background: $purple-hover;
+				}
+			}
+		}
+	}
+
+	.trabalheconosco-img {
+		background-image: url('../images/teacher.jpg');
+		background-position: center;
+		background-size: cover;
+		// .overlay {
+		// 	background: $purple;
+		// 	opacity: 0.7;
+		// 	width: 100%;
+		// 	height: 115%;
+		// }
+	}
+}

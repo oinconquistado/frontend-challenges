@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Focco Estudantil</title>
+		<link rel="icon" href="./images/favico.svg" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/4d2c07b1df.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="top-menu">
+			<p id="logo">Focco</p>
+			<ul id="menu">
+				<li><a href="#quemsomos">Quem Somos</a></li>
+				<li><a href="#proposta">Receba uma proposta</a></li>
+				<li><a href="#trabalheconosco">Trabalhe Conosco</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="content">
+				<h1 class="convite">Venha conhecer nosso método de ensino.</h1>
+				<h3 class="metodologia">
+					Uma metodologia de ensino baseada em experiências reais.
+				</h3>
+				<button
+					id="btn-quem-somos"
+					onclick="location.href='#quemsomos';"
+				>
+					<a href="#quemsomos">Quem Somos</a>
+				</button>
+				<button id="btn-proposta" onclick="location.href='#proposta';">
+					<a href="#proposta">Receba uma proposta</a>
+				</button>
+			</div>
+			<div class="overlay"></div>
+			<video autoplay muted loop id="myVideo">
+				<source src="./images/videos/student.mp4" type="video/mp4" />
+			</video>
+		</div>
+		<div id="quemsomos">
+			<div class="quemsomos-img">
+				<div class="overlay"></div>
+			</div>
+			<div class="quemsomos-texto">
+				<h1>
+					Somos a
+					<span
+						>única <br />
+						escola Brasileira</span
+					>
+					reconhecida internacionalmente
+					<span> pela ONU</span>
+					como representante da <span> pedagogia Waldorf.</span>
+				</h1>
+			</div>
+		</div>
+		<div id="proposta">
+			<div id="form-proposta">
+				<div id="form-box">
+					<div class="texto-proposta">
+						<h1>Receba uma ligação de um de nossos consultores.</h1>
+					</div>
+
+					<form action="">
+						<label for="">Nome:</label><br /><input
+							type="text"
+						/><br />
+						<label for="">Telefone:</label><br /><input
+							type="text"
+						/><br />
+						<label for="">Escreva qual sua dúvida:</label><br />
+						<textarea name="" id="" cols="30" rows="10"></textarea
+						><br /><button>enviar</button>
+					</form>
+				</div>
+			</div>
+			<div class="overlay"></div>
+			<video autoplay muted loop id="myVideo2">
+				<source src="./images/videos/student2.mp4" type="video/mp4" />
+			</video>
+		</div>
+
+		<div id="trabalheconosco">
+			<div class="trabalheconosco-form">
+				<h1>Venha trabalhar conosco</h1>
+				<form action="">
+					<label for="">Nome:</label><br /><input type="text" /><br />
+					<label for="">Telefone:</label><br /><input
+						type="text"
+					/><br />
+					<label for="">Anexe seu currículo:</label><br />
+					<input type="file" /><br />
+					<button>enviar</button>
+				</form>
+			</div>
+			<div class="trabalheconosco-img"><div class="overlay"></div></div>
+		</div>
+	</body>
+</html>

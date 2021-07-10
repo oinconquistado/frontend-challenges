@@ -1,0 +1,415 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+section,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#quemsomos,
+#proposta {
+  display: grid;
+  grid-template: 100vh/100vw;
+}
+
+#trabalheconosco {
+  display: grid;
+  grid-template: 100vh/100vw;
+}
+
+.container {
+  grid-template: 105vh/100vw;
+  overflow: hidden;
+}
+
+.top-menu {
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 98vw;
+  height: 15vh;
+}
+.top-menu #logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #f8f8f2;
+  padding-left: 1rem;
+  font-size: 3rem;
+  opacity: 0.9;
+}
+.top-menu #logo::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  padding: 1.25rem;
+  color: #bd93f9;
+}
+.top-menu #menu {
+  display: flex;
+  list-style: none;
+  color: #f8f8f2;
+}
+.top-menu #menu li a {
+  font-family: "Source Sans Pro", sans-serif;
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.top-menu #menu li a:hover {
+  color: #bd93f9;
+}
+
+.container {
+  background: #282a36;
+}
+.container .content {
+  z-index: 9;
+  color: #f8f8f2;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 60% 20%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container .content h1 {
+  font-size: 4rem;
+  width: 70%;
+  line-height: 1;
+  opacity: 0.9;
+  font-weight: bold;
+}
+.container .content h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.875rem;
+}
+.container .content button {
+  width: 13.75rem;
+  height: 3.125rem;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.container .content button:hover {
+  font-weight: bold;
+}
+.container .content button a {
+  text-decoration: none;
+}
+.container .content #btn-quem-somos {
+  margin-right: 20px;
+  color: #f8f8f2;
+  background: transparent;
+  border: solid 2px #f8f8f2;
+}
+.container .content #btn-quem-somos a {
+  color: inherit;
+}
+.container .content #btn-quem-somos a:hover {
+  color: inherit;
+}
+.container .content #btn-quem-somos:hover {
+  color: #bd93f9;
+  border: solid 2px #bd93f9;
+}
+.container .content #btn-proposta {
+  color: #f8f8f2;
+  background: #bd93f9;
+  border: none;
+}
+.container .content #btn-proposta a {
+  color: inherit;
+}
+.container .content #btn-proposta a:hover {
+  color: inherit;
+}
+.container .content #btn-proposta:hover {
+  background: #9667d8;
+}
+.container .overlay {
+  background: #282a36;
+  position: absolute;
+  width: 100%;
+  height: 117vh;
+  opacity: 0.45;
+  overflow: hidden;
+}
+.container #myVideo {
+  width: 105vw;
+}
+
+#quemsomos,
+#trabalheconosco {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#quemsomos .quemsomos-img {
+  background-image: url("../images/school.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#quemsomos .quemsomos-img .overlay {
+  background: #bd93f9;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+#quemsomos .quemsomos-texto h1 {
+  color: #9667d8;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 3.9rem;
+  line-height: 1.1;
+  padding: 3.125rem 0px 0px 3rem;
+}
+#quemsomos .quemsomos-texto h1 span {
+  color: #f8f8f2;
+  opacity: 0.9;
+  background: #bd93f9;
+  padding: 0 0.3125rem 0 0.3125rem;
+}
+
+#proposta #form-proposta {
+  position: absolute;
+  z-index: 10;
+  display: grid;
+  height: 111vh;
+  width: 100vw;
+  place-items: center;
+}
+#proposta #form-proposta #form-box {
+  width: 60rem;
+  height: 40rem;
+  background: #f8f8f2;
+  border-radius: 0.3125rem;
+  opacity: 0.7;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50% 50%;
+}
+#proposta #form-proposta #form-box .texto-proposta {
+  padding-left: 4rem;
+}
+#proposta #form-proposta #form-box .texto-proposta h1 {
+  font-size: 4.5rem;
+  color: #282a36;
+}
+#proposta #form-proposta #form-box form {
+  font-family: "Source Sans Pro", sans-serif;
+  width: 80%;
+  opacity: 1;
+}
+#proposta #form-proposta #form-box form * {
+  font-size: 1.125rem;
+  width: 15.625rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#proposta #form-proposta #form-box form button {
+  height: 40px;
+  color: #f8f8f2;
+  background: #bd93f9;
+  border: none;
+  text-transform: uppercase;
+}
+#proposta #form-proposta #form-box form button:hover {
+  background: #9667d8;
+}
+#proposta .overlay {
+  background: #bd93f9;
+  position: absolute;
+  width: 100%;
+  height: 111vh;
+  opacity: 0.85;
+}
+#proposta #myVideo2 {
+  width: 100vw;
+}
+
+#trabalheconosco {
+  margin-top: 11vh;
+}
+#trabalheconosco .trabalheconosco-form {
+  display: grid;
+  grid-template-rows: 30% 50%;
+  justify-content: center;
+}
+#trabalheconosco .trabalheconosco-form h1 {
+  font-size: 2.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  color: #282a36;
+  align-self: end;
+  padding: 3.125rem;
+}
+#trabalheconosco .trabalheconosco-form form {
+  margin: 0 auto;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 80%;
+  opacity: 1;
+}
+#trabalheconosco .trabalheconosco-form form * {
+  font-size: 1.125rem;
+  width: 15.625rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#trabalheconosco .trabalheconosco-form form button {
+  height: 40px;
+  color: #f8f8f2;
+  background: #bd93f9;
+  border: none;
+  text-transform: uppercase;
+}
+#trabalheconosco .trabalheconosco-form form button:hover {
+  background: #9667d8;
+}
+#trabalheconosco .trabalheconosco-img {
+  background-image: url("../images/teacher.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
