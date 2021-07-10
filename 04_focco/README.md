@@ -7,10 +7,9 @@ this website was developed in a selection process (job interview) [Origamid](htt
 -   HTML
 -   CSS
 -   SASS
--   Flex-Flow
 
 🟢 - **The site can be acessed [here](https://bit.ly/fcco-est).**
 
 ### Preview
 
-![Flexblog](./img/focco.jpg)
+![Flexblog](./images/focco.jpg)
